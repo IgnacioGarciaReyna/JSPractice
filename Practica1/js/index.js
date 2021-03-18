@@ -1,7 +1,22 @@
 let paragraph = document.getElementById('mainParagraph');
+let btnNumeric = document.getElementById('numeric');
+let btnText = document.getElementById('Text');
+let btnBool = document.getElementById('bool');
+btnNumeric.addEventListener('click', writeNumericValue);
+btnText.addEventListener('click', writeTextValue);
+btnBool.addEventListener('click', writeBoolValue);
 
-paragraph.addEventListener('click', WriteParagraph);
+function writeNumericValue () {
+    let numericValue = 2 + 2;
+    paragraph.textContent = numericValue;
+}
 
-function WriteParagraph() {
-    paragraph.textContent = 'Hola Mundo';
+function writeTextValue() {
+    let textValue = "Jose Carlos";
+    paragraph.textContent = textValue;
+}
+
+function writeBoolValue() {
+    let boolValue = true;
+    paragraph.textContent = true == 1;
 }
