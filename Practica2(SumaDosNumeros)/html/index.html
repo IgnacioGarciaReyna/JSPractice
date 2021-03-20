@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Suma de dos numeros</title>
+    <title>Operaciones de dos números</title>
 </head>
 <body>
+    <h2>Suma de dos números</h2>
     <div class="container">
         <div class="form-group">
             <label for="numero1">Ingrese el número 1</label>
@@ -23,10 +24,82 @@
         id="btnSuma" 
         class="btn btn-outline-primary mt-2 btn-block">
         Realizar suma
-    </button>
-    <div class="alert alert-info mt-2" role="alert">
+        </button>
+        <div id="containerReponse" class="alert alert-info mt-2" role="alert">
         Content
+        </div>
     </div>
+
+    <hr>
+
+    <h2>Resta de dos números</h2>
+    <div class="container">
+        <div class="form-group">
+            <label for="numero1Resta">Ingrese el número 1</label>
+            <input id="numero1Resta" class="form-control" type="number">
+        </div>
+        <div class="form-group">
+            <label for="numero2Resta">Ingrese el número 2</label>
+            <input id="numero2Resta" class="form-control" type="number">
+        </div>
+
+        <button 
+        type="button" 
+        id="btnResta" 
+        class="btn btn-outline-primary mt-2 btn-block">
+        Realizar resta
+        </button>
+        <div id="containerReponseResta" class="alert alert-info mt-2" role="alert">
+        Content
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Multiplicación</h2>
+    <div class="container">
+        <div class="form-group">
+            <label for="numero1Multi">Ingrese el número 1</label>
+            <input id="numero1Multi" class="form-control" type="number">
+        </div>
+        <div class="form-group">
+            <label for="numero2Multi">Ingrese el número 2</label>
+            <input id="numero2Multi" class="form-control" type="number">
+        </div>
+
+        <button 
+        type="button" 
+        id="btnMulti" 
+        class="btn btn-outline-primary mt-2 btn-block">
+        Realizar multiplicación
+        </button>
+        <div id="containerReponseMulti" class="alert alert-info mt-2" role="alert">
+        Content
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>División</h2>
+    <div class="container">
+        <div class="form-group">
+            <label for="numero1Div">Ingrese el número 1</label>
+            <input id="numero1Div" class="form-control" type="number">
+        </div>
+        <div class="form-group">
+            <label for="numero2Div">Ingrese el número 2</label>
+            <input id="numero2Div" class="form-control" type="number">
+        </div>
+
+        <button 
+        type="button" 
+        id="btnDiv" 
+        class="btn btn-outline-primary mt-2 btn-block">
+        Realizar división
+        </button>
+        <div id="containerReponseDiv" class="alert alert-info mt-2" role="alert">
+        Content
+        </div>
     </div>
     <script src="./../js/index.js"></script>
 </body>
