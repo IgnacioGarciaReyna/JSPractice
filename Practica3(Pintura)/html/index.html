@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h1>Comex</h1>
+                </div>
+            </div>
+        </header>
+        <div class="form-group mt-3">
+          <label for="costoMaterial">Ingrese el costo del material:</label>
+          <input type="number" id="costoMaterial" class="form-control" placeholder="Ingrese el costo del material" aria-describedby="helpId">
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="AltoPared">Ingrese el Alto de la pared:</label>
+        <input type="number" id="AltoPared" class="form-control" placeholder="Ingrese el Alto de la pared" aria-describedby="helpId">
+      </div>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="AnchoPared">Ingrese el Ancho de la pared:</label>
+    <input type="number" id="AnchoPared" class="form-control" placeholder="Ingrese el Ancho de la pared" aria-describedby="helpId">
+    <div class="row mt-3">
+        <div class="col-12">
+            <button 
+            type="button" 
+            name="btnCalcular" 
+            id="btnCalcular" 
+            class="btn btn-primary btn-lg btn-block">
+            Calcular Costo
+            </button>
+        </div>
+    </div>
+    <div class="alert alert-primary mt-3" role="alert">
+        <span id="resultado"></span>
+    </div>
+  </div>
+</div>
+<script src="./../js/index.js"></script>
+</body>
+</html>
