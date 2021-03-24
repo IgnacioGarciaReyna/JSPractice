@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Distancia entre dos puntos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Distancia entre dos puntos</h1>
+        </header>
+        <br>
+        <div class="puntoA">
+            <h4>Punto A</h4>
+            <div class="row mt-3">
+                <div class="form-group">
+                    <label for="abscisaA">Abscisa de A</label>
+                    <input 
+                    id="abscisaA" 
+                    class="form-control" 
+                    type="text" 
+                    placeholder="Escriba el valor de la abscisa de A">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="form-group">
+                    <label for="ordenadaA">Ordenada de A</label>
+                    <input 
+                    id="ordenadaA" 
+                    class="form-control" 
+                    type="text" 
+                    placeholder="Escriba el valor de la ordenada de A">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="puntoB">
+            <h4>Punto B</h4>
+            <div class="row mt-3">
+                <div class="form-group">
+                    <label for="abscisaB">Abscisa de B</label>
+                    <input 
+                    id="abscisaB" 
+                    class="form-control" 
+                    type="text" 
+                    placeholder="Escriba el valor de la abscisa de B">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="form-group">
+                    <label for="ordenadaB">Ordenada de B</label>
+                    <input 
+                    id="ordenadaB" 
+                    class="form-control" 
+                    type="text" 
+                    placeholder="Escriba el valor de la ordenada de B">
+                </div>
+            </div>
+        </div>
+        <button 
+        type="button" 
+        name="" 
+        id="botonDistancia" 
+        class="btn btn-primary btn-lg btn-block mt-5">
+            Calcular distancia entre ambos puntos
+        </button>
+        <div class="alert alert-primary mt-3" role="alert">
+            <span id="contenedorDistancia"></span>
+        </div>
+
+
+    </div>
+    <script src="./../js/index.js"></script>
+</body>
+</html>
