@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Puntaje Final</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Puntaje Final</h1>
+        </header>
+        <div class="row mt-3">
+            <div class="form-group">
+                <label for="correctas">Respuestas Correctas:</label>
+                <input 
+                id="correctas" 
+                class="form-control" 
+                type="text" 
+                placeholder="Ingresar cantidad de respuestas correctas"
+                >
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="form-group">
+                <label for="incorrectas">Respuestas Incorrectas:</label>
+                <input 
+                id="incorrectas" 
+                class="form-control" 
+                type="text" 
+                placeholder="Ingresar cantidad de respuestas incorrectas"
+                >
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="form-group">
+                <label for="blanco">Respuestas en Blanco:</label>
+                <input 
+                id="blanco" 
+                class="form-control" 
+                type="text" 
+                placeholder="Ingresar cantidad de respuestas en blanco"
+                >
+            </div>
+        </div>
+        <hr>
+        <div class="col-12 mt-3">
+            <button 
+            type="button" 
+            name="" 
+            id="botonCalcular" 
+            class="btn btn-primary btn-lg btn-block">
+            Calcular puntaje final
+            </button>
+        </div>
+        <div class="alert alert-primary mt-3" role="alert">
+            <span id="contenedorResultado"></span>
+        </div>
+    </div>
+    <script src="./../js/index.js"></script>
+</body>
+</html>
