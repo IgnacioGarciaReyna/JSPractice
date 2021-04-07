@@ -1,0 +1,12 @@
+Elaborar un algoritmo que solicite la edad de 2 hermanos 
+y muestre un mensaje indicando la edad del mayor y cuantos años de diferencia tiene con el menor.
+
+
+Se necesita el registro de la producción (unidades) logradas por un operario a lo largo de la semana (lunes a sábado).
+Elabore un algoritmo que nos muestre si el operario recibirá incentivos sabiendo que el promedio de producción mínima es de 100 unidades.
+
+
+Diseñe un algoritmo que lea tres longitudes y determine si forman o no un triángulo. 
+Si es un triángulo determine de qué tipo de triángulo se trata entre: equilátero (si tiene tres lados iguales), 
+isósceles (si tiene dos lados iguales) o escaleno (si tiene tres lados desiguales). 
+Considere que para formar un triángulo se requiere que: "el lado mayor sea menor que la suma de los otros dos lados".
