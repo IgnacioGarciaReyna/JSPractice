@@ -20,20 +20,33 @@
               <select class="form-control" name="" id="sltTipoTarjeta">
                 <option value="tipo1">Tipo 1</option>
                 <option value="tipo2">Tipo 2</option>
-                <option value="tipo3">Tipo 4</option>
+                <option value="tipo3">Tipo 3</option>
                 <option value="otro">Otro</option>
               </select>
+            </div>
+            <div class="form-group">
+              <label for="inpCredito">Línea de crédio actual</label>
+              <input 
+                type="number" 
+                id="inpCredito" 
+                class="form-control" 
+                placeholder="Ingrese su crédito actual" 
+                aria-describedby="helpId">
             </div>
             <div class="row">
                 <div class="col-12">
                     <button 
                         type="button" 
                         name="" 
-                        id="" 
+                        id="btnCalcularAumento" 
                         class="btn btn-outline-primary btn-lg btn-block"
                         >
+                        Calcular aumento de crédito
                     </button>
                 </div>
+            </div>
+            <div id="resultContainer" class="mt-2">
+
             </div>
 
 
