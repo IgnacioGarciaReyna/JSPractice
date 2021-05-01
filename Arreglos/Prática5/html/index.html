@@ -1,35 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <p>Crea un array de números de un tamaño pasado por teclado, 
-          el array contendrá números aleatorios primos entre los números deseados, por último nos indica cual es el mayor de todos.
-          
-          Haz un método para comprobar que el número aleatorio es primo, puedes hacer todos lo métodos que necesites</p>
+        <header>
+          <h1>Array</h1>
+          <p>
+            Crea un array de números de un tamaño pasado por teclado: <br />
+            -El array contendrá números aleatorios primos entre los números
+            deseados. <br />
+            -Por último nos indica cual es el mayor de todos. <br />
+
+            *Haz un método para comprobar que el número aleatorio es primo,
+            puedes hacer todos lo métodos que necesites
+          </p>
+        </header>
         <div class="form-group">
-          <label for="inpLongitud"></label>
-          <input type="text" id="inpLongitud" class="form-control" placeholder="" >
+          <label for="inpMinimo">Mínimo de los valores:</label>
+          <input
+            type="number"
+            id="inpMinimo"
+            class="form-control"
+            placeholder="Ingrese el mínimo de rango que tendran los valores del array"
+          />
         </div>
-        <button type="button" id="btnMostrar" class="btn btn-primary btn-lg btn-block">Mostrar</button>
+        <div class="form-group">
+          <label for="inpMaximo">Máximo de los valores:</label>
+          <input
+            type="number"
+            id="inpMaximo"
+            class="form-control"
+            placeholder="Ingrese el máximo de rango que tendran los valores del array"
+          />
+        </div>
+        <hr />
+        <div class="form-group">
+          <label for="inpLongitud">Longitud del array:</label>
+          <input
+            type="number"
+            id="inpLongitud"
+            class="form-control"
+            placeholder="Ingrese la longitud del array"
+          />
+        </div>
+        <button
+          type="button"
+          id="btnMostrar"
+          class="btn btn-primary btn-lg btn-block"
+        >
+          Mostrar array
+        </button>
         <ul id="containerResult" class="list-group"></ul>
+        <div id="contenedorMayor" class="alert" role="alert">
+        </div>
       </div>
     </div>
-      
+
     <!-- Optional JavaScript -->
     <script src="./../js/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
