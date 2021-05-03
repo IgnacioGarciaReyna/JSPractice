@@ -21,9 +21,9 @@ function crearArray () {
         continuar = confirm(`Presione "Aceptar" para agregar un nuevo valor. Para terminar presione "Cancelar".`);
     }
 
+    /*
     i1 = 0;
     i2 = 0;
-    const vocales = ["a", "e", "i", "o", "u"];
     let acumulador1 = ``;
     let acumulador2 = ``;
 
@@ -38,6 +38,22 @@ function crearArray () {
         acumulador1 += ` ${arreglo1[i1]},`;
         i1++; 
     }
+    */
+
+    const vocales = ["a", "e", "i", "o", "u"];
+
+    for(let indicePalabras = 0; indicePalabras < arreglo1.length; indicePalabras++) {
+        for(let indicevocales = 0; indicevocales < vocales.length; indicevocales++) {
+            let isVocal = arreglo1[indicePalabras].startsWith(vocales[indicevocales]);
+            if(isVocal == true) {
+                arreglo2.push(arreglo1[indicePalabras]);
+                break;
+            }
+        }
+    }
+    
+    
+    
 
     btnMostrarArray.disabled = true;
     console.log(arreglo1);
@@ -45,7 +61,7 @@ function crearArray () {
 
 
     let container1 = document.getElementById('container1');
-    container1.innerHTML = `<div class="alert-danger">El primer arreglo contiene: [${acumulador1}]</div>`;
+    container1.innerHTML = `<div class="alert-danger">El primer arreglo contiene: [${arreglo1}]</div>`;
     let container2 = document.getElementById('container2');
-    container2.innerHTML = `<div class="alert-success">El segundo arreglo contiene: [${acumulador2}]</div>`;
+    container2.innerHTML = `<div class="alert-success">El segundo arreglo contiene: [${arreglo2}]</div>`;
 }
