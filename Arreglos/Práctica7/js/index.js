@@ -24,21 +24,28 @@ function crearArray () {
     i1 = 0;
     i2 = 0;
     const vocales = ["a", "e", "i", "o", "u"];
+    let acumulador1 = ``;
+    let acumulador2 = ``;
 
     while(i1 < arreglo1.length) {
         let cadenaEnMinuscula = arreglo1[i1].toLowerCase();
-        let primerCaracter = cadenaEnMinuscula[i1].charAt(0);
+        let primerCaracter = cadenaEnMinuscula.charAt(0);
         if (vocales.indexOf(primerCaracter) != -1) {
             arreglo2[i2] = arreglo1[i1];
-            i1++;
+            acumulador2 += ` ${arreglo2[i2]},`;
             i2++;
-        } else {
-            i1++; 
         }
-
+        acumulador1 += ` ${arreglo1[i1]},`;
+        i1++; 
     }
 
     btnMostrarArray.disabled = true;
     console.log(arreglo1);
     console.log(arreglo2);
+
+
+    let container1 = document.getElementById('container1');
+    container1.innerHTML = `<div class="alert-danger">El primer arreglo contiene: [${acumulador1}]</div>`;
+    let container2 = document.getElementById('container2');
+    container2.innerHTML = `<div class="alert-success">El segundo arreglo contiene: [${acumulador2}]</div>`;
 }
