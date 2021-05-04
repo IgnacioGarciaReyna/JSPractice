@@ -61,7 +61,7 @@ function crearArray () {
 
 
     let container1 = document.getElementById('container1');
-    container1.innerHTML = `<div class="alert-danger">El primer arreglo contiene: [${arreglo1}]</div>`;
+    container1.innerHTML = `<div class="alert alert-danger">El primer arreglo contiene: [${arreglo1}]</div>`;
     let container2 = document.getElementById('container2');
-    container2.innerHTML = `<div class="alert-success">El segundo arreglo contiene: [${arreglo2}]</div>`;
+    container2.innerHTML = `<div class="alert alert-success">El segundo arreglo contiene: [${arreglo2}]</div>`;
 }
