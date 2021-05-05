@@ -46,7 +46,7 @@ function mostrarArrays () {
     const container3 = document.getElementById('container3');
 
 
-    numeros3 = numeros1 + "," + numeros2;
+    numeros3 = numeros1.concat(numeros2);
     
     container1.innerHTML = `<div class="alert alert-success">El primer array está compuesto por: <br> [${numeros1}]</div>`;
     container2.innerHTML = `<div class="alert alert-success">El segundo array está compuesto por: <br> [${numeros2}]</div>`;
