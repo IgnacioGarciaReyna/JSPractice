@@ -17,8 +17,10 @@ function crearArray () {
 
     let container1 = document.getElementById('container1');
     let container2 = document.getElementById('container2');
-    container1.innerHTML = `<div class="alert alert-success">El array inicial es: [${arreglo1}]</div>`;
-    container2.innerHTML = `<div class="alert alert-success">Los números impares son: [${arreglo2}]</div>`;
+    container1.innerHTML = `<div class="alert alert-success">El array inicial es: <br> [${arreglo1}]</div>`;
+    container2.innerHTML = `<div class="alert alert-success">Los números impares son: <br> [${arreglo2}]</div>`;
+
+    btnMostrarArray.disabled = true;
 }
 
 function validarNumeroPrimo (numero) {
