@@ -20,5 +20,5 @@ function determinarLength (event) {
 
 function mostrarArray (event) {
     let acumuladorNumeros = '';
-    for (let index = 0; index >= lengthArray; index ++)
+    for (let index = 0; index >= lengthArray; index ++);
 }
