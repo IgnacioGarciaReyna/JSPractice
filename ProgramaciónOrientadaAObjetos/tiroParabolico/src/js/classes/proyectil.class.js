@@ -36,7 +36,7 @@ class Proyectil {
             tiempo += 0.01;
             let left = this.calcularDistanciaX(tiempo);
             let bottom = this.calcularDistanciaY(tiempo);
-            if (left < 0 || bottom < 0 || left >= 100 ||bottom >= 100) {
+            if (bottom < 0) {
                 break;
             }
         
