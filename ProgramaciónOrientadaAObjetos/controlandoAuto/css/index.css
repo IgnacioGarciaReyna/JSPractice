@@ -1,0 +1,21 @@
+#auto {
+    background: black;
+    height: 15%;
+    width: 15%;
+    position: absolute;
+}
+
+#containerPadre {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner {
+    border: black solid 5px;
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
