@@ -1,14 +1,20 @@
 class ListToDo {
     contenido = "";
 
-    constructor(contenido) {
-        this.contenido = contenido;
+    constructor() {
+
+        if(typeof ListToDo.instance === "object") {
+            return ListToDo.instance;
+        }
+
+        ListToDo.instance = this;
+        return this;
     }
 
-    AddActividadDom(ul, origen) {
+    AddActividadDom(ul, origen, contenido) {
         const li = document.createElement("li");
         li.classList = "list-group-item text-break";
-        li.textContent = this.contenido;
+        li.textContent = contenido;
 
         const btnRemove = document.createElement("button");
         btnRemove.classList = "close";
@@ -19,5 +25,9 @@ class ListToDo {
         ul.appendChild(li);
         li.appendChild(btnRemove);
         btnRemove.appendChild(span);
+    }
+
+    removeActividadDom(liActividad) {
+        
     }
 }
