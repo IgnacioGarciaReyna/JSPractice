@@ -1,8 +1,8 @@
 const txtToDo = document.querySelector("#txtToDo");
 const listToDo = document.querySelector("#toDoList");
-const toDoFinish = document.querySelector("#toDoFinish");
+const listFinishToDo = document.querySelector("#toDoFinish");
 
-const createToDo = new ListToDo();
+const createToDo = new ListToDo(listToDo);
 
 let indexSpan = 0;
 EventListener();
@@ -18,14 +18,20 @@ function GetActividades (event) {
         return;
     }
 
-    createToDo.AddActividadDom(listToDo, null, txtToDo.value);
+    createToDo.AddActividadDom(listToDo, "get", txtToDo.value);
     document.querySelectorAll("span")[indexSpan].addEventListener("click", removeActividad);
     indexSpan++;
 }
 
 
 function removeActividad (event) {
-    if(event.target.tagName != "span") return;
-    const liDeleted = event.target;
-    console.log(liDeleted);
+    console.log(event);
+    if(event.target.nodeName != "SPAN") return;
+    let liDeleted = event.target.parentElement.parentElement;
+
+    createToDo.AddActividadDom(listFinishToDo, "deleted" , liDeleted.textContent.substring(0, liDeleted.textContent.length -1));
+
+    listToDo.removeChild(liDeleted);
+    indexSpan--;
 }
+

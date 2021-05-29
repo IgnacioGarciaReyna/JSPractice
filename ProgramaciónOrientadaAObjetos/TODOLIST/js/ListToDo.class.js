@@ -1,14 +1,22 @@
 class ListToDo {
-    contenido = "";
+    ToDoLS;
 
-    constructor() {
-
+    constructor(listToDo) {
         if(typeof ListToDo.instance === "object") {
             return ListToDo.instance;
         }
-
+        this.ToDoLS = new HandleTodoLocalStorage();
+        let tareas = this.ToDoLS.validateDataInLS("todoPendings");
+        this.iniciarTareas(listToDo, tareas);
         ListToDo.instance = this;
         return this;
+    }
+
+    iniciarTareas(listToDo, tareas) {
+        for (let index = 0; index < tareas.length; index++) {
+            this.AddActividadDom(listToDo, null, tareas[index]);
+            
+        }
     }
 
     AddActividadDom(ul, origen, contenido) {
@@ -25,9 +33,12 @@ class ListToDo {
         ul.appendChild(li);
         li.appendChild(btnRemove);
         btnRemove.appendChild(span);
-    }
 
-    removeActividadDom(liActividad) {
+        if (origen == "get") {
+            this.ToDoLS.SavePendingTodoLocalStorage(contenido);
+        } else if (origen == "deleted") {
+            this.ToDoLS.DeletedPendingTodoLocalStorage(contenido);
+        }
         
     }
 }
