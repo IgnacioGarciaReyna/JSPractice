@@ -3,8 +3,7 @@ const listToDo = document.querySelector("#toDoList");
 const listFinishToDo = document.querySelector("#toDoFinish");
 
 const createToDo = new ListToDo(listToDo);
-
-let indexSpan = 0;
+initEvenListenerSpans();
 EventListener();
 
 function EventListener () {
@@ -19,10 +18,18 @@ function GetActividades (event) {
     }
 
     createToDo.AddActividadDom(listToDo, "get", txtToDo.value);
-    document.querySelectorAll("span")[indexSpan].addEventListener("click", removeActividad);
-    indexSpan++;
+    let spanList = document.querySelectorAll(`span[pendiente="true"]`);
+    spanList[spanList.length - 1].addEventListener("click", removeActividad);
 }
 
+
+
+function initEvenListenerSpans () {
+    let spanList = document.querySelectorAll("span");
+    for (let index = 0; index < spanList.length; index++) {
+        spanList[index].addEventListener("click", removeActividad);
+    }
+}
 
 function removeActividad (event) {
     console.log(event);
@@ -32,6 +39,5 @@ function removeActividad (event) {
     createToDo.AddActividadDom(listFinishToDo, "deleted" , liDeleted.textContent.substring(0, liDeleted.textContent.length -1));
 
     listToDo.removeChild(liDeleted);
-    indexSpan--;
 }
 
